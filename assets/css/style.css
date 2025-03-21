@@ -1,0 +1,1356 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Body */
+body {
+  opacity: 0;
+  background: #0b0f12;
+  color: #e0f7fa;
+  line-height: 1.6;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Auth Container */
+.auth-container {
+  width: 350px;
+  margin: 80px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Success & Error Messages */
+.success-msg,
+.error-msg {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.success-msg {
+  background: #d4edda;
+  color: #155724;
+}
+
+.error-msg {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================== Header Styling =================== */
+.hotel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: #111827; /* Dark navy for a premium look */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+}
+
+/* =================== Logo Styling =================== */
+.hotel-logo {
+  display: flex;
+  align-items: center;
+}
+
+.hotel-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hotel-logo img:hover {
+  transform: rotate(0deg) scale(1.4);
+}
+
+.hotel-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+/* =================== Navbar Styling =================== */
+.hotel-navbar {
+  flex: 1;
+  text-align: center;
+}
+
+.hotel-nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.hotel-nav-links li {
+  margin: 0 15px;
+}
+
+.hotel-nav-item {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #f5f5f5;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.hotel-nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #00bcd4;
+  transition: width 0.3s ease-in-out;
+}
+
+.hotel-nav-item:hover {
+  color: #00bcd4;
+}
+
+.hotel-nav-item:hover::after {
+  width: 100%;
+}
+
+/* =================== Auth Buttons Styling =================== */
+.hotel-auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.hotel-btn {
+  padding: 8px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hotel-btn-register {
+  background: #00bcd4;
+  color: #ffffff;
+  border: 2px solid #00bcd4;
+}
+
+.hotel-btn-login {
+  background: transparent;
+  color: #00bcd4;
+  border: 2px solid #00bcd4;
+}
+
+.hotel-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.hotel-btn-register:hover {
+  background: #008c9e;
+}
+
+.hotel-btn-login:hover {
+  background: #00bcd4;
+  color: #ffffff;
+}
+
+/* =================== Footer Styling =================== */
+.hotel-footer {
+  background: #1a1a1a; /* Deep charcoal for a modern feel */
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hotel-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hotel-footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.hotel-footer-section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ffcc00; /* Gold accent */
+}
+
+.hotel-footer-section p,
+.hotel-footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hotel-footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hotel-footer-section ul li {
+  margin: 5px 0;
+}
+
+.hotel-footer-section ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hotel-footer-section ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Social Icons */
+.hotel-social a {
+  display: inline-block;
+  margin: 5px;
+  color: #bbbbbb;
+  font-size: 18px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.hotel-social a:hover {
+  transform: scale(1.2);
+  color: #ffcc00;
+}
+
+/* Newsletter */
+.hotel-newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hotel-newsletter input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.hotel-newsletter button {
+  background: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #222;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hotel-newsletter button:hover {
+  background: #e6b800;
+}
+
+/* Footer Bottom */
+.hotel-footer-bottom {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #444;
+}
+
+.hotel-footer-bottom a {
+  color: #ffcc00;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.hotel-footer-bottom a:hover {
+  color: #e6b800;
+}
+
+/* Back-to-Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffcc00;
+  color: #222;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+  background: #e6b800;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hotel-footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hotel-newsletter input {
+    width: 100%;
+  }
+}
+
+/* =================== Hotel Features Section =================== */
+.hotel-features-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #1e1e1e;
+}
+
+.hotel-features-title {
+  font-size: 2.5rem;
+  color: #00e5ff;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.hotel-features-title::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #00e5ff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hotel-features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hotel-feature-item {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hotel-feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 229, 255, 0.4);
+}
+
+.hotel-feature-item img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.hotel-feature-item:hover img {
+  transform: scale(1.1);
+}
+
+.hotel-feature-item h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.hotel-feature-item p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* =================== Hotel Hero Section =================== */
+.hotel-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/images/hero-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hotel-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hotel-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  animation: fadeInUp 1.2s ease-in-out;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hotel-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hotel-hero-title span {
+  color: #00e5ff;
+  text-shadow: 0 0 20px #00e5ff;
+}
+
+.hotel-hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* Button Styles */
+.hotel-hero-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hotel-btn-primary,
+.hotel-btn-secondary {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hotel-btn-primary {
+  background: #00e5ff;
+  color: #222;
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.5);
+}
+
+.hotel-btn-secondary {
+  background: transparent;
+  color: #00e5ff;
+  border: 2px solid #00e5ff;
+}
+
+.hotel-btn-primary:hover,
+.hotel-btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.6);
+}
+
+/* Smooth Scroll Button */
+.hotel-hero-scroll-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #00e5ff;
+  animation: bounce 1.5s infinite;
+  transition: color 0.3s;
+}
+
+.hotel-hero-scroll-btn:hover {
+  color: #00bcd4;
+}
+
+/* Bounce Animation for Scroll Button */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================== Responsive Hero =================== */
+@media (max-width: 768px) {
+  .hotel-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hotel-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hotel-btn-primary,
+  .hotel-btn-secondary {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+/* =================== Hotel Testimonials Section =================== */
+.hotel-testimonials-section {
+  background: linear-gradient(to right, #1e1e1e, #292929);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hotel-testimonials-title {
+  font-size: 2.5rem;
+  color: #00e5ff;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.hotel-testimonials-title::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #00e5ff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Testimonials Container */
+.hotel-testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Individual Testimonial Item */
+.hotel-testimonial-item {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 320px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 229, 255, 0.2);
+}
+
+.hotel-testimonial-item p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.hotel-testimonial-item h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hotel-testimonial-icon {
+  color: #00e5ff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Testimonial Dots */
+.hotel-testimonial-dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #00e5ff;
+}
+
+/* Testimonial Animation */
+.hotel-testimonial-item.active {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 229, 255, 0.4);
+}
+
+/* =================== Hero Section =================== */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #1e90ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-in-out;
+}
+
+.hero-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* =================== Featured Rooms =================== */
+/* ==================== Featured Rooms Section ==================== */
+.hotel-featured-rooms {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0b0f12, #0d1419);
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 255, 255, 0.1);
+}
+
+/* Section Title */
+.hotel-section-title {
+  font-size: 2.5em;
+  color: #00e5ff;
+  text-shadow: 0 0 20px #00bcd4, 0 0 40px #00e5ff;
+  margin-bottom: 40px;
+  text-align: center;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+/* ==================== Room Container Grid ==================== */
+.hotel-featured-rooms {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0b0f12, #0d1419);
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 255, 255, 0.1);
+}
+
+/* Section Title */
+.hotel-section-title {
+  font-size: 2.5em;
+  color: #00e5ff;
+  text-shadow: 0 0 20px #00bcd4, 0 0 40px #00e5ff;
+  margin-bottom: 40px;
+  text-align: center;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+/* ==================== Dynamic Room Grid ==================== */
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Room Card */
+.room-card {
+  background: rgba(10, 18, 22, 0.9);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 25px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  transition: all 0.4s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+/* Room Hover 3D + Glow */
+.room-card:hover {
+  transform: perspective(1000px) rotateY(3deg) scale(1.05);
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.4),
+    0 0 50px rgba(0, 255, 255, 0.5);
+}
+
+/* Room Image */
+.room-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover */
+.room-card:hover .room-img {
+  transform: scale(1.1) rotate(0deg);
+}
+
+/* Room Title */
+.room-card h3 {
+  font-size: 1.5em;
+  color: #00e5ff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  margin-top: 15px;
+}
+
+/* Room Price */
+.room-card p {
+  font-size: 1.1em;
+  color: #b2ebf2;
+  margin: 10px 0 20px;
+}
+
+/* ==================== Room Button ==================== */
+.room-btn {
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(135deg, #00e5ff, #00bcd4);
+  color: #0b0f12;
+  border: 2px solid #00bcd4;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover */
+.room-btn:hover {
+  background: linear-gradient(135deg, #00bcd4, #00e5ff);
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+/* ==================== Reload Button ==================== */
+.reload-btn-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#reload-btn {
+  background: #0d1419;
+  border: 2px solid #00e5ff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  color: #00e5ff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Reload Button */
+#reload-btn:hover {
+  background: #00e5ff;
+  color: #0b0f12;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ==================== No Rooms Message ==================== */
+.no-rooms {
+  font-size: 1.5em;
+  color: #ff5252;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* ==================== Animations ==================== */
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* =================== Call to Action =================== */
+/* ==================== Hotel CTA Section ==================== */
+.hotel-cta {
+  background: linear-gradient(135deg, #0a0e10, #10171c);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 10px 50px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Glowing Effect */
+.hotel-cta:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 60px rgba(0, 255, 255, 0.3),
+    0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+/* CTA Heading */
+.cta-content h2 {
+  font-size: 2.5em;
+  color: #00e5ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 25px #00e5ff, 0 0 40px #00bcd4;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+/* CTA Paragraph */
+.cta-content p {
+  font-size: 1.1em;
+  color: #b2ebf2;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Button Group */
+.cta-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* ==================== CTA Buttons ==================== */
+.cta-btn {
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(233, 233, 233, 0.2);
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(135deg, #00e5ff, #00bcd4);
+  color: #0b0f12;
+  border: 2px solid #00bcd4;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #00bcd4, #00e5ff);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6),
+    0 0 30px rgba(0, 255, 255, 0.4);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: linear-gradient(135deg, #ff6f61, #ff4c4c);
+  color: #fff;
+  border: 2px solid #ff6f61;
+}
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #ff4c4c, #ff6f61);
+  box-shadow: 0 10px 30px rgba(255, 99, 71, 0.6),
+    0 0 30px rgba(255, 71, 87, 0.4);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* 3D Button Effect */
+.cta-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease-out;
+  border-radius: 50%;
+}
+.cta-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+  .hotel-cta {
+    padding: 40px 15px;
+    width: 95%;
+  }
+  .cta-btn {
+    padding: 8px 18px;
+    font-size: 0.85em;
+  }
+  .cta-content h2 {
+    font-size: 2em;
+  }
+}
+
+/* ==================== Animations ==================== */
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* =================== Back to Top Button =================== */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(to right, #ffd700, #ffa500);
+  color: #111;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  border: none;
+  box-shadow: 0 5px 20px rgba(255, 165, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: none;
+}
+
+#backToTop.show-btn {
+  display: block;
+  animation: floatBtn 1.5s infinite ease-in-out;
+}
+
+#backToTop:hover {
+  background: linear-gradient(to right, #ffeb3b, #ffd700);
+  transform: scale(1.2);
+}
+
+/* Floating Animation for Back to Top */
+@keyframes floatBtn {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =================== Fixed Navbar on Scroll =================== */
+.fixed-nav {
+  position: fixed;
+  width: 100%;
+  background: #222;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+/* ==============rooms.php================== */
+/* Section Styling */
+.rooms-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #222;
+}
+
+/* Title */
+.section-title {
+  font-size: 2.5rem;
+  color: #f5a623;
+  margin-bottom: 30px;
+}
+
+/* Filter Dropdown */
+.filter-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filter-dropdown {
+  width: 200px;
+  margin: auto;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+/* Room Grid */
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Room Card */
+.room-card {
+  background: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Room Image */
+.room-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Room Info */
+.room-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.room-title {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.room-price {
+  color: #f5a623;
+  font-weight: bold;
+}
+
+.room-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #f5a623;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.room-btn:hover {
+  background: #ffcc00;
+}
+
+/* Pagination */
+.pagination-container {
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  padding: 8px 15px;
+  margin: 0 5px;
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination-btn:hover {
+  background: #f5a623;
+}
+
+/* ============room_details.php============== */
+/* ==================== Room Details Container ==================== */
+.hotel-room-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.05);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ==================== Room Title & Description ==================== */
+.hotel-room-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f5a623;
+  margin-bottom: 12px;
+}
+
+.hotel-room-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* ==================== Room Image ==================== */
+.hotel-room-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.hotel-room-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+/* === Glowing Effect on Hover with Gradient === */
+.hotel-room-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(245, 166, 35, 0.8), 0 0 40px rgba(245, 166, 35, 0.5);
+}
+
+/* ==================== Room Details Table ==================== */
+.hotel-room-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #2b2b2b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hotel-room-details th,
+.hotel-room-details td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  color: #ddd;
+}
+
+.hotel-room-details th {
+  background: #333;
+  color: #f5a623;
+  font-weight: 600;
+}
+
+/* ==================== Action Buttons ==================== */
+.hotel-btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Common Button Styles */
+.hotel-room-btn,
+.hotel-back-btn {
+  padding: 8px 14px; /* Smaller button size */
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Book Now Button */
+.hotel-room-btn {
+  background: linear-gradient(145deg, #f5a623, #e59400);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.4);
+}
+
+.hotel-room-btn:hover {
+  background: linear-gradient(145deg, #e59400, #d98200);
+  box-shadow: 0 6px 20px rgba(245, 166, 35, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Back Button */
+.hotel-back-btn {
+  background: #444;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-back-btn:hover {
+  background: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== Amenities & Highlights ==================== */
+.hotel-room-amenities {
+  margin-top: 25px;
+  background: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.hotel-room-amenities h3 {
+  font-size: 1.5rem;
+  color: #f5a623;
+  margin-bottom: 12px;
+}
+
+.hotel-room-amenities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hotel-room-amenities li {
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.hotel-room-amenities li:last-child {
+  border-bottom: none;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+  .hotel-room-container {
+    padding: 15px;
+  }
+
+  .hotel-room-title {
+    font-size: 1.5rem;
+  }
+
+  .hotel-btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hotel-room-btn,
+  .hotel-back-btn {
+    width: 100%;
+  }
+}
+
+/* ==================== Animations ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

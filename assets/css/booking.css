@@ -1,0 +1,156 @@
+/* ===================== Booking Page Nitro CSS ===================== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+/* ===================== Booking Container ===================== */
+.booking-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+/* ===================== Booking Title ===================== */
+.booking-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===================== Booking Form ===================== */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===================== Booking Input Groups ===================== */
+.booking-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-input-group label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b3b3b3;
+}
+
+.booking-input-group input,
+.booking-input-group select {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #3d3d5c;
+  background: #1a1a2e;
+  color: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow on Focus */
+.booking-input-group input:focus,
+.booking-input-group select:focus {
+  border-color: #ff5e62;
+  box-shadow: 0 0 15px rgba(255, 94, 98, 0.8);
+  outline: none;
+}
+
+/* ===================== Booking Button ===================== */
+.booking-btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.booking-btn:hover {
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  box-shadow: 0 0 20px rgba(255, 94, 98, 0.9);
+  transform: translateY(-3px);
+}
+
+/* ===================== Success and Error Messages ===================== */
+.booking-success-msg,
+.booking-error-msg {
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Success Message */
+.booking-success-msg {
+  background: linear-gradient(to right, #56ab2f, #a8e063);
+  color: #fff;
+}
+
+/* Error Message */
+.booking-error-msg {
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  color: #fff;
+}
+
+/* ===================== Scroll to Top Button ===================== */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Show Scroll Button */
+.scroll-to-top-btn.show-btn {
+  display: flex;
+}
+
+/* Hover Effect */
+.scroll-to-top-btn:hover {
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  box-shadow: 0 0 20px rgba(255, 94, 98, 0.8);
+}
+
+/* ===================== Responsive Design ===================== */
+@media (max-width: 768px) {
+  .booking-container {
+    padding: 20px;
+  }
+
+  .booking-title {
+    font-size: 1.8rem;
+  }
+
+  .booking-btn {
+    font-size: 1rem;
+  }
+}

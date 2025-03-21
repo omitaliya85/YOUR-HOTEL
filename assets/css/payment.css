@@ -1,0 +1,99 @@
+/* Payment Page - Dark Theme with Cyan & Ice Colors */
+body {
+  margin: 0;
+  padding: 0;
+  background: #1a1f2b;
+  font-family: "Arial", sans-serif;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.payment-container {
+  background: linear-gradient(145deg, #212630, #2b303d);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 8px 8px 20px #121217, -8px -8px 20px #4b4f5c;
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #00e5ff;
+  margin-bottom: 1.5rem;
+}
+
+.payment-info h2 {
+  color: #aeeaff;
+}
+
+.payment-info p {
+  margin: 8px 0;
+  color: #b0bec5;
+}
+
+.message.success {
+  background-color: #00c853;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.message.error {
+  background-color: #e57373;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.payment-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-size: 1rem;
+  color: #b0bec5;
+  text-align: left;
+}
+
+.payment-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2b303d;
+  color: #e0e0e0;
+}
+
+.btn-confirm {
+  background-color: #00e5ff;
+  color: #0d1b2a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-confirm:hover {
+  background-color: #00c4cc;
+}
+
+.back-btn {
+  margin-top: 15px;
+  display: inline-block;
+  background-color: #37474f;
+  color: #cfd8dc;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #455a64;
+}

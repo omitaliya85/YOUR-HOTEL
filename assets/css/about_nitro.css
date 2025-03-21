@@ -1,0 +1,199 @@
+/* ====================== Global Styles ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ====================== About Page ====================== */
+.nitro-about-page {
+  overflow-x: hidden;
+}
+
+/* ====================== Hero Section ====================== */
+.nitro-about-hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #09203f, #537895);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.nitro-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.nitro-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nitro-title {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #f5a623, #e942f5, #22e4f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s infinite alternate;
+}
+
+.nitro-tagline {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #e0e0e0;
+  letter-spacing: 1px;
+}
+
+/* ====================== About Section ====================== */
+.nitro-about-section {
+  padding: 80px 20px;
+  background: #121212;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.nitro-heading {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #f5a623;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.nitro-heading::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #f5a623, #22e4f5);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* About Description */
+.nitro-description {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+}
+
+/* ====================== Card Grid ====================== */
+.nitro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Design */
+.nitro-card {
+  background: linear-gradient(145deg, #1c1c1c, #292929);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Gradient Glow */
+.nitro-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(245, 166, 35, 0.6), 0 0 35px rgba(34, 228, 245, 0.6);
+}
+
+.nitro-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #f5a623;
+}
+
+.nitro-card p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+/* ====================== Amenities Section ====================== */
+.nitro-amenities-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  text-align: center;
+}
+
+/* ====================== Animations ====================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing Text Animation */
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 20px rgba(245, 166, 35, 0.7),
+      0 0 30px rgba(34, 228, 245, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 35px rgba(255, 0, 255, 0.9),
+      0 0 45px rgba(245, 166, 35, 0.9);
+  }
+}
+
+/* ====================== Responsive Design ====================== */
+@media (max-width: 768px) {
+  .nitro-title {
+    font-size: 2.5rem;
+  }
+
+  .nitro-tagline {
+    font-size: 1.2rem;
+  }
+
+  .nitro-heading {
+    font-size: 2rem;
+  }
+
+  .nitro-grid {
+    grid-template-columns: 1fr;
+  }
+}

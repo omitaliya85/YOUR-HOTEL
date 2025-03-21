@@ -1,0 +1,163 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(145deg, #1a202c, #2d3748); /* Dark Background */
+  color: #e0f7fa; /* Ice Blue Text */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.booking-container {
+  background: #2c3e50; /* Deep Blue */
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 4px 4px 12px #121217, -4px -4px 12px #4b4f5c;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #00e5ff; /* Neon Cyan */
+  margin-bottom: 1rem;
+}
+
+/* Success and Error Messages */
+.message {
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success {
+  background-color: #00c853;
+  color: #fff;
+}
+
+.error {
+  background-color: #ff1744;
+  color: #fff;
+}
+
+/* Booking List */
+.booking-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* Booking Card */
+.booking-card {
+  background: #1e2a38; /* Dark Blue */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px #121217, -2px -2px 8px #4b4f5c;
+}
+
+/* Booking Info and Status */
+.booking-info h2 {
+  color: #00e5ff;
+  margin-bottom: 8px;
+}
+
+.booking-info p,
+.booking-status p {
+  margin-bottom: 6px;
+  color: #b2ebf2; /* Soft Cyan */
+}
+
+/* Booking Status */
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Status Colors */
+.pending {
+  background-color: #ffa726;
+  color: #212121;
+}
+
+.confirmed {
+  background-color: #00c853;
+  color: #fff;
+}
+
+.checked-in {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+.checked-out {
+  background-color: #8e24aa;
+  color: #fff;
+}
+
+.cancelled {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.cancel-btn {
+  background: #ff3d00;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background: #d32f2f;
+}
+
+.back-btn {
+  display: block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background: #00e5ff;
+  color: #212121;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  background: #00bcd4;
+}
+
+/* No Bookings Message */
+.no-bookings {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ff8a80;
+  padding: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,199 @@
+/* =================== Dark Theme Global =================== */
+body.dark-theme {
+  background: #121212;
+  color: #ddd;
+}
+
+/* =================== Dark Theme Authentication =================== */
+.dark-theme .auth-container {
+  background: #2a2a2a;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Dark Theme Inputs */
+.dark-theme input,
+.dark-theme textarea,
+.dark-theme select {
+  background: #333;
+  color: #ddd;
+  border: 1px solid #555;
+  padding: 10px;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.dark-theme input:focus,
+.dark-theme textarea:focus,
+.dark-theme select:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+  outline: none;
+}
+
+/* Dark Mode Buttons */
+.dark-theme .btn {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.dark-theme .btn:hover {
+  background: #008c9e;
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.5);
+}
+
+/* Success & Error Messages */
+.dark-theme .success-msg {
+  background: #155724;
+  color: #d4edda;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dark-theme .error-msg {
+  background: #721c24;
+  color: #f8d7da;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* =================== Dark Theme Header =================== */
+.dark-theme .hotel-header {
+  background: #1e1e1e;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .hotel-name {
+  color: #fff;
+}
+
+/* Navbar Links */
+.dark-theme .hotel-nav-item {
+  color: #ccc;
+  transition: color 0.3s ease-in-out;
+}
+
+.dark-theme .hotel-nav-item:hover {
+  color: #00e5ff;
+}
+
+/* Buttons */
+.dark-theme .hotel-btn-register {
+  background: #00e5ff;
+  border: 2px solid #00e5ff;
+  color: #fff;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.dark-theme .hotel-btn-register:hover {
+  background: #0097a7;
+  transform: scale(1.05);
+}
+
+.dark-theme .hotel-btn-login {
+  background: transparent;
+  color: #00e5ff;
+  border: 2px solid #00e5ff;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.dark-theme .hotel-btn-login:hover {
+  background: #00e5ff;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* =================== Dark Theme Footer =================== */
+.dark-theme .hotel-footer {
+  background-color: #0d0d0d;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.dark-theme .hotel-footer-section h2 {
+  color: #ffd700;
+}
+
+.dark-theme .hotel-footer-section ul li a {
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.dark-theme .hotel-footer-section ul li a:hover {
+  color: #ffd700;
+}
+
+/* Social Media Links */
+.dark-theme .hotel-social a {
+  color: #ffd700;
+  font-size: 18px;
+  margin: 0 10px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.dark-theme .hotel-social a:hover {
+  color: #ffeb3b;
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.dark-theme .hotel-footer-bottom {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+/* =================== Back to Top Button =================== */
+.dark-theme #backToTop {
+  background: #ffd700;
+  color: #111;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.dark-theme #backToTop:hover {
+  background: #ffeb3b;
+  transform: scale(1.1);
+}
+
+/* ============index page=============== */
+/* =================== Dark Theme Global =================== */
+body.dark-theme {
+  background: #121212;
+  color: #ddd;
+}
+
+/* =================== Dark Theme Hero Section =================== */
+.dark-theme .hero-section {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #1a1a1a);
+}
+
+/* =================== Dark Theme Featured Rooms =================== */
+
+/* =================== Dark Theme Call to Action =================== */
+
+/* =================== Dark Theme Back to Top =================== */
+.dark-theme #backToTop {
+  background: linear-gradient(to right, #ffd700, #ffa500);
+  color: #111;
+}
+
+.dark-theme #backToTop:hover {
+  background: linear-gradient(to right, #ffeb3b, #ffd700);
+  transform: scale(1.2);
+}
+
+/* =================== Dark Theme Navbar =================== */
+.dark-theme .fixed-nav {
+  background: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
